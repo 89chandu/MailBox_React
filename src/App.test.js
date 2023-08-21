@@ -26,3 +26,5 @@ test('navigates to home page after successful login in Auth component', async ()
   render(<App />);
   // Add the navigation test here (test case 5)
 });
+
+
