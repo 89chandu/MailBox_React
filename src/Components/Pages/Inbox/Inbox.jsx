@@ -15,7 +15,7 @@ const Inbox = () => {
     const getAllMails = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('token'))
-        let response = await axios.get('http://localhost:3010/email/get', { headers: { "Authorization": token } });
+        let response = await axios.get('http://localhost:3000/email/get', { headers: { "Authorization": token } });
         let count = 0;
         response.data.data.forEach((item) => {
           if (item.opened == false) count++;
