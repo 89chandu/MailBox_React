@@ -20,10 +20,10 @@ const Auth = () => {
       setSendingReq(true);
       let response;
       if (login) {
-        response = await axios.post(`http://localhost:3010/users/login`, obj);
+        response = await axios.post(`http://localhost:3000/users/login`, obj);
       }
       else {
-        response = await axios.post(`http://localhost:3010/users/signup`, obj);
+        response = await axios.post(`http://localhost:3000/users/signup`, obj);
           setLogin(true);
       }
       console.log('Auth api being called')
@@ -51,8 +51,8 @@ const Auth = () => {
     let Obj = {
       // email: emailRef.current.value,
       // password: passwordRef.current.value
-      email: 'sahilkumar2275@gmail.com',
-      password:'Sahil'
+      email: 'chandubopche8@gmail.com',
+      password:'Chandu'
     }
     passwordRef.current.value = emailRef.current.value = "";
     login ? AuthHandler(Obj) : AuthHandler(Obj)
