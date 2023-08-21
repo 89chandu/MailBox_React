@@ -70,4 +70,25 @@ test('displays "No emails available" message when no emails', async () => {
   await waitFor(() => {
     expect(screen.getByText('No emails available')).toBeInTheDocument();
   });
+
+
+  
+    
+    // Mock axios to simulate login error
+    axios.post.mockRejectedValueOnce(new Error('Login error'));
+  
+    const emailInput = screen.getByLabelText('Email :');
+    const passwordInput = screen.getByLabelText('Password');
+    const submitButton = screen.getByText('login'); // Adjust this based on your component's text
+  
+  
+  
+    await waitFor(() => {
+      const alertElement = screen.getByRole('alert');
+      expect(alertElement).toBeInTheDocument();
+    // Replace with the expected error message
+    });
 });
+
+
+
