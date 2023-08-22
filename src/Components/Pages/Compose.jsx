@@ -16,17 +16,17 @@ const Compose = () => {
       const contentPlainText = contentState.getPlainText();
       setEditorState(EditorState.createEmpty());
       const obj = {
-        // receiver: receiverRef.current.value,
+        receiver: receiverRef.current.value,
         body: contentPlainText,
         subject:subjectRef.current.value,
-        receiver: 'sahilkumar2275@gmail.com',
+        // receiver: 'sahilkumar2275@gmail.com',
         // subject: 'quitting application',
         // body: 'Loream Ipsum',
         opened:false
       }
       receiverRef.current.value = subjectRef.current.value = '';
       const token = JSON.parse(localStorage.getItem('token'));
-      const response = await axios.post('http://localhost:3000/email/send', obj, { headers: { "Authorization": token } });
+      const response = await axios.post('http://localhost:3010/email/send', obj, { headers: { "Authorization": token } });
      
       toast.success(response.data.msg);
     } catch (error) {
