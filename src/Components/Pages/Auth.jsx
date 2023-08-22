@@ -56,8 +56,7 @@ const Auth = () => {
     let Obj = {
       email: emailRef.current.value,
       password: passwordRef.current.value
-      // email: 'sahilkumar2275@gmail.com',
-      // password:'Sahil'
+      
     }
     passwordRef.current.value = emailRef.current.value = "";
     login ? AuthHandler(Obj) : AuthHandler(Obj)
@@ -66,7 +65,7 @@ const Auth = () => {
 
   return (
     <div className="mt-[50px] flex flex-col items-center p-8 " >
-      <div className=" grid sm:grid-cols-2 sm:grid-rows-1 p-7 bg-gradient-to-r from-[#1F2937] to-[#5e779b] ... ">
+      <div className=" grid sm:grid-cols-2 sm:grid-rows-1 p-7 bg-gradient-to-r from-[#709ad4] to-[#87CEEB] ... ">
         <div className=" bg-white p-5 flex flex-col justify-evenly">
 
           {openalert && <Alert severity={alertSeverity}>{alertMsg}!</Alert>}
@@ -93,7 +92,7 @@ const Auth = () => {
           </div>
         </div>
         <div className=" hidden sm:block bg-white   ">
-          <img className="object-cover max-h-[650px] w-full " src="https://images.unsplash.com/photo-1528329140527-75853b1e1650?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="" />
+          <img className="object-cover max-h-[650px] w-full " src="https://media.istockphoto.com/id/545240218/vector/mail-box.jpg?s=612x612&w=0&k=20&c=B8iazd49L0ser8eVnkAJAHlNZqd11iYdPQg7PEUNRoY=" alt="" />
 
         </div>
       </div>
@@ -104,6 +103,7 @@ const Auth = () => {
 }
 
 export default Auth
+
 
 
 
