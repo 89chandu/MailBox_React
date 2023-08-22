@@ -12,7 +12,7 @@ const SentMailInbox = () => {
         const getAllMails = async () => {
             try {
                 const token = JSON.parse(localStorage.getItem('token'))
-                let response = await axios.get('http://localhost:3010/email/getSentMail', { headers: { "Authorization": token } });
+                let response = await axios.get('http://localhost:3000/email/getSentMail', { headers: { "Authorization": token } });
                 setMails(response.data.data);
             } catch (error) {
                 console.log(error);
